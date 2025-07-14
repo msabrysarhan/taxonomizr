@@ -897,7 +897,7 @@ condenseTaxa<-function(taxaTable,groupings=rep(1,nrow(taxaTable))){
 #' \dontrun{
 #'   getNamesAndNodes()
 #' }
-getNamesAndNodes<-function(outDir='.',url=sprintf('%s://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz',protocol),fileNames=c('names.dmp','nodes.dmp'),protocol='ftp',resume=TRUE){
+getNamesAndNodes<-function(outDir='.',url=sprintf('%s://ftp.ncbi.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz',protocol),fileNames=c('names.dmp','nodes.dmp'),protocol='ftp',resume=TRUE){
   outFiles<-file.path(outDir,fileNames)
   if(all(file.exists(outFiles))){
     message(paste(outFiles,collapse=', '),' already exist. Delete to redownload')
